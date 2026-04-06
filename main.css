@@ -33,11 +33,16 @@ body{
 .scoreContainer{
   align-content: center;
   text-align: center;
-  margin-bottom: 13vh;
+  margin-bottom: 10vh;
+}
+.scoreTitle{
+  display: inline;
+  margin: 0rem 8.5rem;
+  color: #e0dad2;
 }
 .score{
   display: inline;
-  margin: 2rem 10rem;
+  margin: 0rem 10rem;
   color: #e0dad2;
 }
 

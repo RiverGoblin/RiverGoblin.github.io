@@ -9,6 +9,8 @@ const choiceEnum = {
 
 console.log(choiceEnum.ROCK == 1);
 
+
+
 function resetState() {
   playerScoreVar = 3;
   compScoreVar = 3;
@@ -18,14 +20,26 @@ function resetState() {
 
 function handleGameEnd() {
   if (playerScoreVar <= 0) {
-    display.src = "dead.jpg"   
-    resetState();
+    setTimeout(() => {
+      display.src = "dead.jpg"   
+      resetState();
+    }, 2000);
+    setTimeout(() => {
+      display.src = "idle.jpg"   
+      resetState();
+    }, 4000);
   }
   if (compScoreVar <= 0) {
-    display.src = "won.jpg"
-    resetState();
+    setTimeout(() => {
+      display.src = "won.jpg"   
+      resetState();
+    }, 2000);
+    setTimeout(() => {
+      display.src = "idle.png"   
+      resetState();
+    }, 4000);
   }
-
+  
 }
 
 function handleResult(playerWon) {
@@ -38,17 +52,17 @@ function handleResult(playerWon) {
     playerScoreVar--;
   }
   display.src = src;
-  setTimeout(() => {
-    display.src = "idle.png"
-  }, 2500);
-}
+  setTimeout(() => {  
+      display.src = "idle.png"
+    }, 2000);
+ }
 
 function compareChoices(playerChoice, computerChoice) {
   if (playerChoice == computerChoice) {
     display.src = "even.png"
-    setTimeout(() => {
+    setTimeout(() => {  
       display.src = "idle.png"
-    }, 2500);
+    }, 2000);  
   }else{
      switch (playerChoice) {
         case choiceEnum.ROCK:
@@ -77,7 +91,7 @@ function compareChoices(playerChoice, computerChoice) {
      }
     compScore.innerText = compScoreVar;
     playerScore.innerText = playerScoreVar;
-    handleGameEnd();
+    handleGameEnd(); 
   }
 }
 
