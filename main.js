@@ -25,7 +25,7 @@ function handleGameEnd() {
       resetState();
     }, 1000);
     setTimeout(() => {
-      display.src = "idle.jpg"   
+      display.src = "idle.png"   
       resetState();
     }, 1000);
   }
