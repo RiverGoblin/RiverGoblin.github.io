@@ -27,7 +27,7 @@ function handleGameEnd() {
     setTimeout(() => {
       display.src = "idle.png"   
       resetState();
-    }, 1000);
+    }, 2000);
   }
   if (compScoreVar <= 0) {
     setTimeout(() => {
