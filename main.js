@@ -23,21 +23,21 @@ function handleGameEnd() {
     setTimeout(() => {
       display.src = "dead.jpg"   
       resetState();
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
       display.src = "idle.jpg"   
       resetState();
-    }, 4000);
+    }, 1000);
   }
   if (compScoreVar <= 0) {
     setTimeout(() => {
       display.src = "won.jpg"   
       resetState();
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
       display.src = "idle.png"   
       resetState();
-    }, 4000);
+    }, 2000);
   }
   
 }
@@ -54,7 +54,7 @@ function handleResult(playerWon) {
   display.src = src;
   setTimeout(() => {  
       display.src = "idle.png"
-    }, 2000);
+    }, 1000);
  }
 
 function compareChoices(playerChoice, computerChoice) {
@@ -62,7 +62,7 @@ function compareChoices(playerChoice, computerChoice) {
     display.src = "even.png"
     setTimeout(() => {  
       display.src = "idle.png"
-    }, 2000);  
+    }, 1000);  
   }else{
      switch (playerChoice) {
         case choiceEnum.ROCK:
